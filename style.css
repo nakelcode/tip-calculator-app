@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --body-bg: hsl(185, 41%, 84%);
+    --logo-col: hsl(183, 100%, 15%);
+    --contents-bg: hsl(0, 0%, 100%);
+    --input-col: hsl(189, 41%, 97%);
+    --reset-bg: hsl(172, 67%, 45%);
+    --label-col: hsl(184, 14%, 56%);
+}
+body{
+    font-family: "Space Mono", serif;
+    background-color: var(--body-bg);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+h1{
+    color: var(--logo-col);
+    letter-spacing: 0.3em;
+}
+h1 span{
+    display: block;
+    color: var(--logo-col);
+}
+.main-container{
+    background-color: var(--contents-bg);
+    width: 100%;
+    min-height: 93vh;
+    border-radius: 20px 20px 0px 0px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.price{
+    display: flex;
+    flex-direction: column;
+}
+.bill-input{
+    background-image: url("img/icon-dollar.svg");
+    background-repeat: no-repeat;    
+    background-position: 1em;
+    text-align: right;
+    padding: 10px;
+    padding-left: 15px;
+    border-radius: 5px;
+    font-size: 24px;
+    background-color: var(--input-col);
+    border: none;
+    color: var(--logo-col);
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    outline: none;
+}
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.no-spinner {
+    -moz-appearance: textfield;
+}
+.percentages{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+.percent{
+    background-color: var(--logo-col);
+    color: var(--input-col);
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-family: "Space Mono", serif;
+    padding: 4px;
+    cursor: pointer;
+}
+.percent:hover,
+.percent:focus{
+    background-color: var(--reset-bg);
+}
+.custom-input{
+    text-align: right;
+    border: none;
+    background-color: var(--input-col);
+    padding: 10px;
+    color: var(--logo-col);
+    border-radius: 5px;
+    font-size: 24px;
+    font-family: "Space Mono", serif;
+    width: 100%;
+    outline: none;
+}
+.people-input{
+    background-image: url("img/icon-person.svg");
+    background-repeat: no-repeat;    
+    background-position: 1em;
+    text-align: right;
+    padding: 10px;
+    padding-left: 15px;
+    border-radius: 5px;
+    font-size: 24px;
+    background-color: var(--input-col);
+    border: none;
+    color: var(--logo-col);
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    width: 100%;
+    outline: none;
+}
+.people-input:focus, 
+.custom-input:focus,
+.bill-input:focus{
+    border: 2px solid var(--reset-bg);
+}
+.total-main-container{
+    background-color: var(--logo-col);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.total-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.person{
+    display: block;
+    opacity: 0.7;
+}
+h2{
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.reset-btn{
+    width: 100%;
+    background-color: var(--reset-bg);
+    color: var(--logo-col);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 24px;
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+.reset-btn:active{
+    background-color: var(--body-bg);
+}
+.amount{
+    position: absolute;
+    right: 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--reset-bg);
+}
+#label-for-people{
+    position: relative;
+}
+#warn{
+    position: absolute;
+    right: 0;
+    color: red;
+}
+label, 
+.select-tip{
+    color: var(--label-col);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+@media (min-width: 1440px) {
+    main{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-container{
+        width: 100%;
+        min-height: 100%;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .total-main-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 20px;
+    }
+    .percentages{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

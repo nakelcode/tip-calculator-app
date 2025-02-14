@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="olamilekan">
+    <title>Tip Calculator App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1>SPLI <span>TTER</span></h1>
+        <section class="main-container">
+            <section class="container">
+                <section class="price">
+                    <label for="">Bill</label>
+                    <input class="bill-input no-spinner" type="number">
+                </section>
+    
+                <section>
+                    <h2 class="select-tip">Select Tip %</h2>
+                    <div class="percentages">
+                        <button class="percent five">5%</button>
+                        <button class="percent ten">10%</button>
+                        <button class="percent fifteen">15%</button>
+                        <button class="percent twenty-five">25%</button>
+                        <button class="percent fifty">50%</button>
+                        <input class="custom-input no-spinner" type="number" placeholder="Custom">
+                    </div>
+                </section>
+    
+                <section id="label-for-people">
+                    <label for="">Number of People <span id="warn"></span></label>
+                    <input class="people-input no-spinner" type="number">
+                </section>
+
+            </section>
+            <section class="total-main-container">
+                <div class="total-container">
+                    <h2>Tip Amount <span class="person">/ person</span></h2>
+                    <p class="amount">$<span id="tip-amount">0.00</span></p>
+                </div>
+                <div class="total-container">
+                    <h2>Total <span class="person">/ person</span></h2>
+                    <p class="amount">$<span id="total-cost">0.00</span></p>
+                </div>
+                <button class="reset-btn">RESET</button>
+            </section>
+            
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
